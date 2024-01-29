@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import {motion} from "framer-motion"
 import {fadeIn} from "../variant"
+import { CiCircleCheck } from "react-icons/ci";
 const Pricing = () => {
   const [isYearly,setIsYearthly]=useState(false)
   const packages=[
     {name:"Start", mothlyPrices:19,yearlyPrice:199, description:
     "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    green:"src/assets/Rectangle.png"
+
     },
     {name:"Advance", mothlyPrices:39,yearlyPrice:399, description:
     "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    green:"src/assets/Rectangle.png"
+
     },
     {name:"Premium", mothlyPrices:59,yearlyPrice:599, description:
     "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    green:"src/assets/Rectangle.png"
+
     }
   ]
   return (
@@ -53,11 +54,11 @@ const Pricing = () => {
               }<span className='text-base text-tartiary font-medium'>/{isYearly ? 'year':'month'}</span>
             </p>
             <ul className='mt-4 space-y-2 px-4'>
-              <li className='flex gap-3 items-center'><img src={pkg.green} className='w-4 h-4' alt="img#" /> Videos of Lessons</li>
-              <li className='flex gap-3 items-center'><img src={pkg.green} className='w-4 h-4' alt="img#" /> Homework check</li>
-              <li className='flex gap-3 items-center'><img src={pkg.green} className='w-4 h-4' alt="img#" /> Additional practical task</li>
-              <li className='flex gap-3 items-center'><img src={pkg.green} className='w-4 h-4' alt="img#" /> Monthly conferences </li>
-              <li className='flex gap-3 items-center'><img src={pkg.green} className='w-4 h-4' alt="img#" /> Personal advice from teachers</li>
+              <li className='flex gap-3 items-center'><CiCircleCheck className=' text-green-500 text-xl'/> Videos of Lessons</li>
+              <li className='flex gap-3 items-center'><CiCircleCheck className=' text-green-500 text-xl'/> Homework check</li>
+              <li className='flex gap-3 items-center'><CiCircleCheck className=' text-green-500 text-xl'/> Additional practical task</li>
+              <li className='flex gap-3 items-center'><CiCircleCheck className=' text-green-500 text-xl'/> Monthly conferences </li>
+              <li className='flex gap-3 items-center'><CiCircleCheck className=' text-green-500 text-xl'/> Personal advice from teachers</li>
               
             </ul>
             <div className='w-full mx-auto mt-8 flex items-center justify-center'>
